@@ -1,0 +1,32 @@
+{
+  "name": "weecms",
+  "version": "1.0.0",
+  "description": "Wee CMS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkovats/weecms.git"
+  },
+  "author": "George Kovats <kovatsgeorge@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gkovats/thekovats/issues"
+  },
+  "homepage": "https://github.com/gkovats/thekovats#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "jquery": "^3.2.1",
+    "jquery-ui": "^1.12.1",
+    "popper.js": "^1.12.9",
+    "pump": "^2.0.0"
+  }
+}

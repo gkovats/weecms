@@ -1,0 +1,119 @@
+
+/** HEADER **/
+
+header {
+  font-family: $font_header;
+  background: $bgcolor_header;
+  font-weight: bold;
+  nav {
+    border-radius: 10px;
+    position: relative;
+    height: auto;
+    padding: 0 90px;
+    .navbar-brand {
+      color: #fff;
+      div {
+        font-size: 1.4em;
+        margin-top: -10px;
+      }
+      small {
+        font-size: .7em;
+        padding: 0;
+        margin-top: -5px;
+        display: block;
+      }
+      @media (max-width: 768px) {
+        font-size: .8em;
+      }
+    }
+
+    .nav-item {
+      i.fa {
+        font-size: .7em;
+      }
+    }
+    a.nav-link {
+      margin: 0 10px;
+      text-transform: uppercase;
+    }
+
+  }
+}
+
+// Content Wrappers
+div.container {
+  max-width: 1000px;
+  margin: auto;
+  clear: both;
+  display: block;
+  padding: 0;
+  position: relative;
+}
+
+#content {
+  background: $bgcolor_content;
+  padding: 15px 0;
+
+  // Carousel
+  #carousel {
+    max-width: 800px;
+    margin: 0 auto 10px auto;
+    
+    img {}
+    a {
+      color: #FFF;
+    }
+    p a {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    
+    .carousel-caption {
+      background: rgba(0,0,0,.6);
+      border-radius: 10px;
+      h1, h2, h3 {
+        color: #FFF;
+      }
+      p {
+        color: #DDD;
+      }
+    }
+  }
+  
+  .content {
+    padding: 15px;
+  }
+}
+/** FOOTER **/
+#footer {
+  color: #FFF;
+  min-height:40px;
+  padding: 20px 0px;
+  font-size: .7em;
+  clear: both; 
+  background: $bgcolor_footer;
+  
+  .bar {
+    font-size: .85em;
+    clear: both;
+    border:none;
+    color: $white;
+    text-align: center;
+  }
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .pane {
+    width: 250px;
+    margin: 0 0 10px;
+    padding: 0 10px;
+    float: left;
+    
+    ul li {
+    margin: 0 0 0 15px;
+    }
+    
+  }
+
+}

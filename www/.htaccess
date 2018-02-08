@@ -1,0 +1,33 @@
+RedirectMatch 403 ^.*/files/
+ErrorDocument 403 &nbsp;
+RewriteEngine on
+Options -Indexes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond $1#%{REQUEST_URI} ([^#]*)#(.*)\1$
+RewriteRule ^(.*)$ index.php?page=$1 [QSA,L]
+
+# hide the folders we want to restrict
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^\/?posts\/.*\.txt*$ index.php?page=404
+RewriteRule ^\/?bin\/.*$ index.php?page=404
+RewriteRule \.(ini|phtml|log)$ index.php?page=404
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpg|jpeg|png|gif|swf|ico)$">
+        Header set Cache-Control "max-age=604800, public"
+    </FilesMatch>
+
+    <FilesMatch "\.(js|css|swf)$">
+        Header set Cache-Control "max-age=604800"
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_mime.c>
+    AddType application/vnd.ms-fontobject    .eot
+    AddType application/x-font-opentype      .otf
+    AddType image/svg+xml                    .svg
+    AddType application/x-font-ttf           .ttf
+    AddType application/font-woff            .woff
+    AddType application/font-woff2           .woff2
+    AddType application/rss+xml              .rss
+</IfModule>

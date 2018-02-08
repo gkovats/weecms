@@ -1,0 +1,134 @@
+/*
+ * Common structural elements
+ */
+
+input:-moz-placeholder {
+  color:#a9a9a9;
+}
+textarea:-moz-placeholder {
+  color:#a9a9a9;
+}
+body {
+  font-size: 1.2em;
+  font-family: $font;
+  color: $fontcolor;
+  background: $background;
+}
+
+select, input, textarea {
+  color: $fontcolor;
+  background: $white;
+}
+p, li {
+  font-size: .9em;
+  margin: 5px 0px;
+  color: $fontcolor;
+  line-height: 1.4em;
+}
+
+// Things in posts
+pre, code {
+  padding: 15px;
+  font-family: Consolas, "Courier New", Courier, monospace;
+  line-height: 1em;
+  font-size: .9em;
+  color: #444;
+}
+
+blockquote {
+  background: $lightgrey;
+  font-style: italic;
+  background-repeat: no-repeat;
+  padding: 15px;
+  margin: 0 0 10px;
+  font-size: .9em;
+  font-family: "Palatino Linotype", "Book Antiqua", "Times New Roman", Times, serif;
+}
+
+ul {
+  list-style: square;
+  margin-left: 15px;
+}
+ol {
+  margin-left: 20px;
+}
+li {
+  color: $fontcolor;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  color: $fontcolor_header;
+  font-family: $font_header;
+  padding: 5px 0px;
+}
+h1 {
+  font-size: 1.6em;
+  padding: 10px 0px;
+}
+h2 {
+  font-size: 1.4em;
+}
+h3 {
+  font-size: 1.3em;
+}
+h4 { font-size: 1.2em; }
+h5 { font-size: 1.1em; }
+h6 { font-size: 1em; }
+a {
+  text-decoration:none;
+  color: $fontcolor_link;
+}
+.break { clear: both; margin: 0; height: 1px; font-size: 1px; }
+
+/* COMMON ELEMENTS */
+
+table { margin:5px; border-collapse:collapse;}
+table tbody,
+table tr,
+table td { padding:8px 5px; text-align:left; vertical-align:top; background:#ffffff; border:1px solid #cccccc; color:#666666;}
+table th { padding:8px 5px; text-align:center; vertical-align:middle; background:#eeeeee; border:1px solid #cccccc; color: $fontcolor;}
+dt, dd { font-size: 16px; color:$fontcolor; }
+fieldset { border:1px dashed $lightgrey; padding:10px; }
+legend { margin:5px; padding:3px; font-size: 12px; color:#000000; }
+form { margin:5px; padding:10px; font-size: 13px; color: $fontcolor; }
+textarea { border:1px solid $lightgrey; font-size: 13px; color:#666666; margin:5px; padding:5px; width:90%; }
+input[type="text"],
+input[type="password"] {
+  padding: 2px 5px;
+  margin: 5px;
+  font-size: 12px;
+  color:#666666;
+  border:1px solid $lightgrey;
+}
+
+select {
+  padding:3px;
+  width:200px;
+  margin:5px;
+  font-size: 12px;
+  color:#666666;
+  border:1px solid $lightgrey;
+}
+label{ font-size: 14px; line-height: 22px; color: $fontcolor; }
+
+.roundcorner {
+  @include border-radius(10px);
+}
+
+.screen-reader-text {
+  display: none;
+  visibility: hidden;
+}
+
+// A giant freaking Font Awesome icon
+.giant-icon {
+  text-align: center;
+  margin: 10px auto;
+  i {
+    font-size: 5em;
+  }
+  h1 {
+    margin: 0 auto;
+  }
+}
